@@ -37,6 +37,7 @@ public class SimpleMenuTest {
                 .isEqualTo(menu.select("Покормить собаку").get());
         menu.forEach(i -> System.out.println(i.getNumber() + i.getName()));
     }
+
     @Test
     public void whenAddAndSelect() {
         Menu menu = new SimpleMenu();
@@ -49,6 +50,7 @@ public class SimpleMenuTest {
                 .isEqualTo(menu.select("Первая подподзадача").get());
         assertThat(menu.select("Вторая подподзадача").isEmpty()).isTrue();
     }
+
     @BeforeEach
     public void setUpStreams() {
         System.setOut(new PrintStream(OUT_CONTENT));
@@ -58,6 +60,7 @@ public class SimpleMenuTest {
     public void restoreStreams() {
         System.setOut(ORIGINAL_OUT);
     }
+
     @Test
     public void whenUsePrinter() {
         Menu menu = new SimpleMenu();

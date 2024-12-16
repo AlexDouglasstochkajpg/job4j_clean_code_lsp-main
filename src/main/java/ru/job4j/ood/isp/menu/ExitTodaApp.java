@@ -5,6 +5,7 @@ public class ExitTodaApp implements UserAction {
     public String name() {
         return "Выход из программы";
     }
+
     @Override
     public boolean execute(Menu menu, ActionDelegate action) {
         return false;

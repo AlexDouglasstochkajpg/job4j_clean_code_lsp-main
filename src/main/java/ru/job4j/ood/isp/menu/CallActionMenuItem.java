@@ -5,6 +5,7 @@ public class CallActionMenuItem implements UserAction {
     public String name() {
         return "Вызвать действие, привязанное к пункту меню";
     }
+
     @Override
     public boolean execute(Menu menu, ActionDelegate action) {
         action.delegate();

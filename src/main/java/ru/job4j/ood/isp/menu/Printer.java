@@ -2,6 +2,7 @@ package ru.job4j.ood.isp.menu;
 
 public class Printer implements MenuPrinter {
     private static final String INDENT = "----";
+
     private int countIndent(String number) {
         char ch = '.';
         int result = 0;
@@ -12,6 +13,7 @@ public class Printer implements MenuPrinter {
         }
         return result;
     }
+
     @Override
     public void print(Menu menu) {
         for (Menu.MenuItemInfo menuItemInfo : menu) {

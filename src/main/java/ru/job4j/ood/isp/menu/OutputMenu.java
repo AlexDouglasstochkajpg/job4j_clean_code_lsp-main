@@ -5,6 +5,7 @@ public class OutputMenu implements UserAction {
     public String name() {
         return "Вывод меню";
     }
+
     @Override
     public boolean execute(Menu menu, ActionDelegate action) {
         MenuPrinter printer = new Printer();

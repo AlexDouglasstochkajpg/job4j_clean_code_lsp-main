@@ -9,9 +9,11 @@ public class TodoApp {
 
     private final Scanner scanner = new Scanner(System.in);
     private final Menu menu;
+
     public TodoApp(Menu menu) {
         this.menu = menu;
     }
+
     public void init(List<UserAction> actions) {
         boolean run = true;
         while (run) {
@@ -26,12 +28,14 @@ public class TodoApp {
             run = action.execute(menu, DEFAULT_ACTION);
         }
     }
+
     private void showMenu(List<UserAction> action) {
         System.out.println("Меню действий:");
         for (int i = 0; i < action.size(); i++) {
             System.out.println(i + "." + action.get(i).name());
         }
     }
+
     public static void main(String[] args) {
         Menu menu = new SimpleMenu();
         List<UserAction> actions = List.of(

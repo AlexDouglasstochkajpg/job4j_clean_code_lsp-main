@@ -5,6 +5,7 @@ public class AddElementForRoot implements UserAction {
     public String name() {
         return "Добавить элемент в корень меню";
     }
+
     @Override
     public boolean execute(Menu menu, ActionDelegate action) {
         System.out.println("Введите название элемента");
